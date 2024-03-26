@@ -1,8 +1,6 @@
 name: Build Contribute List
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   contrib-readme-job:
