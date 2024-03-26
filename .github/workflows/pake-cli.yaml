@@ -77,6 +77,11 @@ jobs:
         with:
           toolchain: stable-x86_64-msvc
           target: x86_64-pc-windows-msvc
+          
+      - name: Update Rust dependencies for windows
+        if: inputs.platform == 'windows-latest'
+        run: cargo update
+        working-directory: node_modules/pake-cli/src-tauri
 
       - name: Install Rust for macos-latest
         if: inputs.platform == 'macos-latest'
