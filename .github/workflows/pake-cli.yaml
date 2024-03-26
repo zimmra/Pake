@@ -73,7 +73,7 @@ jobs:
 
       - name: Install Rust for windows-latest
         if: inputs.platform == 'windows-latest'
-        uses: zimmra/rust-toolchain@master
+        uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable-x86_64-msvc
           target: x86_64-pc-windows-msvc
