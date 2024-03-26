@@ -80,6 +80,7 @@ jobs:
           
       - name: Update Rust dependencies for windows
         if: inputs.platform == 'windows-latest'
+        shell: bash
         run: cargo update
         working-directory: node_modules/pake-cli/src-tauri/
 
